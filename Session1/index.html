@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app="AppModule">
+  <head>
+    <script src="lib/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div ng-controller="AppController">
+      <label>Name:</label>
+      <input type="text" ng-model="vm.UserName" placeholder="Enter a name here" />
+      <input type="button" value="Say!" ng-click="vm.SayHello()" />
+      <hr>
+      <h1>{{vm.Greeting}}</h1>
+      <hr>
+      <div ng-repeat="(key, value) in vm.Names track by $index">
+          <p>{{value.Surname}} {{value.Name}}</p>
+      </div>
+    </div>
+  </body>
+</html>
