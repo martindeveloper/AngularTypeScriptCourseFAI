@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+  <base href="/" />
+  <script src="bower_components/system.js/dist/system.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+
+  <script>
+    System.config({
+        baseURL: "app",
+        defaultJSExtensions: "js"
+      });
+      System.import('app');
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#/">Angular</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/users/list">Users</a></li>
+        <li><a href="#/users/add">Add user</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    
+    <div ng-view></div>
+
+  </div>
+</body>
+
+</html>
