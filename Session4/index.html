@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  <title>Angular2</title>
+  <meta charset="UTF-8" />
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import("app").catch(function(err){ console.error(err); });
+  </script>
+
+  <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+  <link href="node_modules/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+
+  <style>
+    #app-viewport {
+      margin-top: 5rem;
+    }
+    
+    #loader-main {
+      position: absolute;
+      top: 45%;
+      left: 45%;
+    }
+    
+    .loader {
+      background-image: url("/public/images/loader.gif");
+      background-size: 42px 42px;
+      background-repeat: no-repeat;
+      width: 42px;
+      height: 42px;
+    }
+    
+    .loader-right {
+      float: right;
+      margin-right: 5px;
+    }
+    
+    .exchange-base-input {
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app-viewport" class="container">
+    <app-component>
+      <p id="loader-main">Application is loading...</p>
+    </app-component>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Surname</th>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Birthday</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let user of Storage.Users; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{user.Surname}}</td>
+            <td>{{user.Name}}</td>
+            <td>{{user.Balance | currency : "CZK" : true : "1.2-2"}}</td>
+            <td>{{user.Birthday | date:"dd/MM/yyyy"}}</td>
+        </tr>
+    </tbody>
+</table>
